@@ -1,7 +1,7 @@
 {
   "name": "LBRY-Viewer",
   "short_name": "LBRY-Viewer",
-  "start_url": ".",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#100C18",
   "theme_color": "#F77D31",
