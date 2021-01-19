@@ -11,13 +11,21 @@ body {
   float: right;
   display: inline-block;
   
+  .green {
+    color: green !important;
+    background-color: yellow !important;
+  }
+  
   iframe {
     width: 100%;
-    height: calc(100vh - 4em);
+    height: calc(100vh - 7em);
   }
 }
 
 #main {
+  max-height: 100vh;
+  overflow-y: auto;
+  
   width: calc(100vw - @RewardWidth - 50px);
   //border: 1px solid red;
   //display: inline-block;
