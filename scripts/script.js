@@ -1,5 +1,5 @@
 let setRewardIframeAutoReload = function () {
-  return false // for debug
+  //return false // for debug
   setTimeout(() => {
      $('#RewardIframe').attr("src", $('#RewardIframe').attr("src"))
      setRewardIframeAutoReload()
