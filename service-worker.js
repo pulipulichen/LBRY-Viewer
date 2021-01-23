@@ -1,3 +1,5 @@
+const PRECACHE = 'precache-v2021-0123-022107';
+
 /*
  Copyright 2016 Google Inc. All Rights Reserved.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +18,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v2021-0119-022107';
+
 const RUNTIME = 'runtime';
 
 /**

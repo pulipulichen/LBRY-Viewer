@@ -1,9 +1,13 @@
 let setRewardIframeAutoReload = function () {
   //return false // for debug
   setTimeout(() => {
-     $('#RewardIframe').attr("src", $('#RewardIframe').attr("src"))
+     reloadRewardIframe()
      setRewardIframeAutoReload()
   }, 3 * 60 * 1000)
+}
+
+let reloadRewardIframe = function () {
+  $('#RewardIframe').attr("src", $('#RewardIframe').attr("src"))
 }
 
 let url = "https://odysee.com/$/big_hits"
@@ -93,6 +97,12 @@ let onLastUpdateButtonClick = function () {
   )
 }
 
+let setupReloadRewardButton = function () {
+  $('.reload-reward-button').click(() => {
+    reloadRewardIframe()
+  })
+}
+
 $(() => {
   
   setRewardIframeAutoReload()
@@ -100,4 +110,6 @@ $(() => {
   drawPlayers()
   
   setupLastUpdate()
+  
+  setupReloadRewardButton()
 })
