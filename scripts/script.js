@@ -11,7 +11,7 @@ let reloadRewardIframe = function () {
 }
 
 let url = "https://odysee.com/$/big_hits"
-//url = '_blank'
+url = '_blank'
 
 let drawPlayers = function () {
   let container = $('#main')
@@ -23,8 +23,16 @@ let drawPlayers = function () {
 </div>`)
   
   player.find('button').click(function () {
-    let localPlayer = $(this).parents('.player:first')
+    let $this = $(this)
+    let localPlayer = $this.parents('.player:first')
     localPlayer.toggleClass('playing')
+    
+    let nextPlayer = localPlayer.next()
+    if (nextPlayer.length > 0) {
+      let $nextButton = nextPlayer.find('button')
+      $nextButton.focus()
+      $nextButton[0].scrollIntoView()
+    }
   })
   
   let max = 12
