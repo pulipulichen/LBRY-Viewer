@@ -11,7 +11,7 @@ let reloadRewardIframe = function () {
 }
 
 let url = "https://odysee.com/$/big_hits"
-url = '_blank'
+//url = '_blank'
 
 let drawPlayers = function () {
   let container = $('#main')
