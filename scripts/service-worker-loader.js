@@ -1,4 +1,7 @@
-if ('serviceWorker' in navigator) {
+let enableServiceWorker = ('serviceWorker' in navigator)
+//enableServiceWorker = false
+if (enableServiceWorker) {  // 不使用service-worker快取，這樣會無法安裝
+//if ('serviceWorker' in navigator) {  
   navigator.serviceWorker.register('./service-worker.js')
     .then(function (registration) {
       // Registration was successful
