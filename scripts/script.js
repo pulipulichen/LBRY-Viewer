@@ -25,13 +25,16 @@ let drawPlayers = function () {
   player.find('button').click(function () {
     let $this = $(this)
     let localPlayer = $this.parents('.player:first')
-    localPlayer.toggleClass('playing')
     
-    let nextPlayer = localPlayer.next()
-    if (nextPlayer.length > 0) {
-      let $nextButton = nextPlayer.find('button')
-      $nextButton.focus()
-      $nextButton[0].scrollIntoView()
+    localPlayer.toggleClass('playing')
+    if (localPlayer.hasClass('playing') === true) {
+      
+      let nextPlayer = localPlayer.next()
+      if (nextPlayer.length > 0) {
+        let $nextButton = nextPlayer.find('button')
+        $nextButton.focus()
+        $nextButton[0].scrollIntoView()
+      }
     }
   })
   
