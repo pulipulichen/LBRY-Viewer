@@ -81,7 +81,7 @@ let setupLastUpdate = function () {
   
   let intervalContainer = $('.last-update-interval')
   intervalContainer.text(intervalHours)
-  if (intervalHours > 24) {
+  if (intervalHours > 15) {
     intervalContainer.addClass('green')
   }
   
