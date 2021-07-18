@@ -10,7 +10,7 @@ let reloadRewardIframe = function () {
   $('#RewardIframe').attr("src", $('#RewardIframe').attr("src"))
 }
 
-let url = "https://odysee.com/$/big_hits"
+let url = "https://odysee.com/$/tech"
 //url = '_blank'
 
 let drawPlayers = function () {
